@@ -5,16 +5,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class HorizontalSliderPage
+public class HorizontalSliderPage extends AbstractPage
 {
-    private final WebDriver driver;
-
     private final By slider = By.tagName("input");
     private final By sliderValue = By.id("range");
 
     public HorizontalSliderPage(WebDriver driver)
     {
-        this.driver = driver;
+        super(driver);
     }
 
     public void setSliderToValue(double value)

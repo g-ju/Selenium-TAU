@@ -3,16 +3,15 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage
+public class LoginPage extends AbstractPage
 {
-    private final WebDriver driver;
     private final By usernameField = By.id("username");
     private final By passwordField = By.id("password");
     private final By loginButton = By.cssSelector("#login button");
 
     public LoginPage(WebDriver driver)
     {
-        this.driver = driver;
+        super(driver);
     }
 
     public void setUserName(String userName)

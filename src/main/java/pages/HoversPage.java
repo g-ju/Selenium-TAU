@@ -5,16 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class HoversPage
+public class HoversPage extends AbstractPage
 {
-    private final WebDriver driver;
-
     private final By figureBox = By.className("figure");
     private final By figureCaption = By.className("figcaption");
 
     public HoversPage(WebDriver driver)
     {
-        this.driver = driver;
+        super(driver);
     }
 
     public FigureCaption hoverOverFigure(int index)
@@ -27,7 +25,7 @@ public class HoversPage
         return new FigureCaption(figure.findElement(figureCaption));
     }
 
-    public class FigureCaption
+    public static class FigureCaption
     {
         private final WebElement caption;
 

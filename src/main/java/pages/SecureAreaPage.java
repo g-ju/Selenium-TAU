@@ -3,14 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SecureAreaPage
+public class SecureAreaPage extends AbstractPage
 {
-    private final WebDriver driver;
     private final By statusAlert = By.id("flash");
 
     public SecureAreaPage(WebDriver driver)
     {
-        this.driver = driver;
+        super(driver);
     }
 
     public String getAlertText()
