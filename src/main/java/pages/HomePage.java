@@ -62,4 +62,10 @@ public class HomePage extends AbstractPage
         clickLink("Context Menu");
         return new ContextMenuPage(driver);
     }
+
+    public WysiwygEditorPage clickWysiwygPage()
+    {
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
+    }
 }
