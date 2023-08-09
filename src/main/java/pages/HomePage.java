@@ -50,4 +50,10 @@ public class HomePage extends AbstractPage
         clickLink("JavaScript Alerts");
         return new AlertsPage(driver);
     }
+
+    public FileUploadPage clickFileUploadPage()
+    {
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+    }
 }
