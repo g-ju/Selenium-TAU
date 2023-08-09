@@ -56,4 +56,10 @@ public class HomePage extends AbstractPage
         clickLink("File Upload");
         return new FileUploadPage(driver);
     }
+
+    public ContextMenuPage clickContextMenuPage()
+    {
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
 }
