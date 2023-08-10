@@ -75,4 +75,10 @@ public class HomePage extends AbstractPage
         clickLink("Nested Frames");
         return new NestedFramePage(driver);
     }
+
+    public DynamicLoadingPage clickDynamicLoading()
+    {
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
+    }
 }
