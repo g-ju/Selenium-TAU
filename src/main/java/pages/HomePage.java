@@ -81,4 +81,16 @@ public class HomePage extends AbstractPage
         clickLink("Dynamic Loading");
         return new DynamicLoadingPage(driver);
     }
+
+    public LargeDeepDOMPage clickLargeDeepDOM()
+    {
+        clickLink("Large & Deep DOM");
+        return new LargeDeepDOMPage(driver);
+    }
+
+    public InfiniteScrollPage clickInfiniteScroll()
+    {
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
 }
