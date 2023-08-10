@@ -3,6 +3,8 @@ package javascript;
 import base.BaseTests;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 import static org.testng.Assert.assertEquals;
 
 public class JavaScriptTests extends BaseTests
@@ -20,5 +22,19 @@ public class JavaScriptTests extends BaseTests
         var scrollPage = homePage.clickInfiniteScroll();
         scrollPage.scrollToParagraph(5);
         assertEquals(scrollPage.getNumberOfParagraphsPresent(), 5);
+    }
+
+    @Test
+    public void testAllowMultipleDropdown()
+    {
+        var dropdownPage = homePage.clickDropdown();
+        dropdownPage.allowMultipleSelection();
+        dropdownPage.selectFromDropdown("Option 1");
+        dropdownPage.selectFromDropdown("Option 2");
+
+        List<String> selectedOptions = dropdownPage.getSelectedOptions();
+        assertEquals(selectedOptions.size(), 2);
+        assertEquals(selectedOptions.get(0), "Option 1");
+        assertEquals(selectedOptions.get(1), "Option 2");
     }
 }

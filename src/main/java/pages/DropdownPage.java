@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -33,5 +34,12 @@ public class DropdownPage extends AbstractPage
         return selectedElements.stream()
                                .map(WebElement::getText)
                                .collect(Collectors.toList());
+    }
+
+    public void allowMultipleSelection()
+    {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        String script = "arguments[0].setAttribute('multiple', '');";
+        jsExecutor.executeScript(script, driver.findElement(dropdown));
     }
 }
