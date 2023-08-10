@@ -49,4 +49,13 @@ public class WindowManager
             driver.switchTo().window(window);
         }
     }
+
+    /**
+     * This looks like it's only good for switching to a new tab as soon as it's opened?
+     */
+    public void switchToNewTab()
+    {
+        driver.getWindowHandles()
+              .forEach(window -> driver.switchTo().window(window));
+    }
 }
