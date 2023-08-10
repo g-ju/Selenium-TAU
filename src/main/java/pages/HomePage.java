@@ -68,4 +68,11 @@ public class HomePage extends AbstractPage
         clickLink("WYSIWYG Editor");
         return new WysiwygEditorPage(driver);
     }
+
+    public NestedFramePage clickNestedFramePage()
+    {
+        clickLink("Frames");
+        clickLink("Nested Frames");
+        return new NestedFramePage(driver);
+    }
 }

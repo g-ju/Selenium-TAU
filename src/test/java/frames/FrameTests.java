@@ -18,4 +18,13 @@ public class FrameTests extends BaseTests
 
         assertEquals(editorPage.getEditorText(), "hello world");
     }
+
+    @Test
+    public void testNestedFrames()
+    {
+        var nestedFramePage = homePage.clickNestedFramePage();
+
+        assertEquals(nestedFramePage.getTopLeftFrameText(), "LEFT");
+        assertEquals(nestedFramePage.getBottomFrameText(), "BOTTOM");
+    }
 }
