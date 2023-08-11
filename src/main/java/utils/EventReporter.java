@@ -89,7 +89,7 @@ public class EventReporter implements WebDriverEventListener
     @Override
     public void afterFindBy(By by, WebElement webElement, WebDriver webDriver)
     {
-        System.out.println("Found web element " + webElement.getText());
+
     }
 
     @Override
