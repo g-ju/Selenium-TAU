@@ -13,6 +13,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
+import utils.CookieManager;
 import utils.EventReporter;
 import utils.WindowManager;
 
@@ -69,6 +70,11 @@ public class BaseTests
     public WindowManager getWindowManager()
     {
         return new WindowManager(driver);
+    }
+
+    public CookieManager getCookieManager()
+    {
+        return new CookieManager(driver);
     }
 
     private ChromeOptions getChromeOptions()
